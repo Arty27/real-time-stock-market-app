@@ -200,7 +200,7 @@
     @apply !bg-gray-800 text-gray-400 border-0 border-b border-gray-600 rounded-none focus:ring-0 placeholder:text-gray-500;
   }
   .country-select-empty {
-    @apply text-gray-500 py-6 text-center !bg-gray-800;
+    @apply text-gray-500 py-6 text-center bg-gray-800!;
   }
   .country-select-item {
     @apply text-white cursor-pointer px-3 py-2 rounded-sm bg-gray-800 hover:!bg-gray-600;
@@ -485,4 +485,9 @@
 
 .scrollbar-hide-default::-webkit-scrollbar-thumb:hover {
   background-color: #9095a1;
+}
+
+.emoji {
+  font-family:
+    "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
 }
