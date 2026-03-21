@@ -17,9 +17,11 @@ import React from "react";
 import { LogOut } from "lucide-react";
 import NavItems from "./NavItems";
 import { signOut } from "@/lib/actions/auth.actions";
+import { useSession } from "@/app/SessionProvider";
 
-const UserDropdown = ({ user }: { user: User }) => {
+const UserDropdown = () => {
   const router: AppRouterInstance = useRouter();
+  const user = useSession();
 
   const handleSignOut = async () => {
     await signOut();
@@ -45,7 +47,7 @@ const UserDropdown = ({ user }: { user: User }) => {
           </Avatar>
           <div className="hidden md:flex flex-col items-start">
             <span className="text-base font-medium text-gray-400">
-              {user.name}
+              {user?.name}
             </span>
           </div>
         </Button>
