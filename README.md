@@ -7,3 +7,5 @@ Features
 - Add Stocks To Watchlist
 - Get personalized emails about your Watchlist stocks everyday.
 - Search and view stocks and its detailed analysis
+
+## More update to readme coming soon...!
