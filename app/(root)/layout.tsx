@@ -3,7 +3,7 @@ import { auth } from "@/lib/better-auth/auth";
 import { email } from "better-auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import React from "react";
+import { SessionProvider } from "../SessionProvider";
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   const session = await auth.api.getSession({ headers: await headers() });
@@ -15,10 +15,13 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
     name: session.user.name,
     email: session.user.email,
   };
+
   return (
     <main className="min-h-screen text-gray-400">
-      <Header user={user} />
-      <div className="container py-10">{children}</div>
+      <SessionProvider user={user}>
+        <Header />
+        <div className="container py-10">{children}</div>
+      </SessionProvider>
     </main>
   );
 };
