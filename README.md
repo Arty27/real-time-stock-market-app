@@ -1,4 +1,4 @@
-### Stock Tracker App
+## Stock Tracker App
 
 URL - [Stock Tracker](https://real-time-stock-market-app-jet.vercel.app/)
 
@@ -8,4 +8,4 @@ Features
 - Get personalized emails about your Watchlist stocks everyday.
 - Search and view stocks and its detailed analysis
 
-## More update to readme coming soon...!
+### More update to readme coming soon...!
